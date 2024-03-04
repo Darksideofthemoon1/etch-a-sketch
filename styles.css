@@ -38,3 +38,7 @@ h1 {
   font-family: "Fjalla One", monospace;
   color: black;
 }
+
+.black {
+  background-color: black;
+}
