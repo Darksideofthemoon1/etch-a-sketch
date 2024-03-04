@@ -22,9 +22,6 @@ const resetGrid = () => {
 const changeColor = () => {
   const squares = document.querySelectorAll(".square");
   squares.forEach((s) => {
-    if (s.classList.contains("black")) {
-      s.classList.remove("black");
-    }
     s.addEventListener("mouseover", () => {
       let randomColor = Math.floor(Math.random() * 16777215).toString(16);
       s.style.backgroundColor = "#" + randomColor;
@@ -48,9 +45,11 @@ const createGrid = (num) => {
     square.style.width = `calc(100% / ${num})`;
     square.style.height = `calc(500px / ${num})`;
     containerDiv.appendChild(square);
-    setBlack();
-    btnReset.addEventListener("click", resetGrid);
-    btnRainbow.addEventListener("click", changeColor);
+    square.addEventListener("mouseover", () => {
+      square.classList.add("black");
+    });
   }
 };
 createGrid(gridSize);
+btnReset.addEventListener("click", resetGrid);
+btnRainbow.addEventListener("click", changeColor);
