@@ -1,15 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Madimi+One&display=swap");
+
 * {
   margin: 0;
   padding: 0;
 }
 
 body {
-  height: 100vh;
-  width: 100%;
   display: flex;
   flex-direction: column;
+  background-color: #e9f1fa;
 }
 
 .parentDiv {
@@ -22,7 +23,7 @@ body {
   height: 500px;
   display: flex;
   flex-wrap: wrap;
-  border: 5px solid black;
+  border: 5px solid white;
 }
 
 .square {
@@ -34,11 +35,47 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 30px;
-  font-family: "Fjalla One", monospace;
-  color: black;
+  padding: 20px;
+  font-family: "Madimi One", monospace;
+  font-size: 40px;
+  color: #08f;
 }
 
-.black {
+.color {
   background-color: black;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+  gap: 15px;
+}
+
+.btn {
+  padding: 10px;
+  align-items: center;
+  background-color: #08f;
+  border: 2px solid #08f;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  fill: #000;
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: -0.8px;
+  line-height: 24px;
+  min-width: 140px;
+  outline: 0;
+  padding: 0 17px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
